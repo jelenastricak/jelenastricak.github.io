@@ -1,0 +1,171 @@
+---
+layout: default
+title: Adventures
+permalink: /adventures/
+---
+
+<div class="container">
+    <div class="fade-in">
+        <h1>Adventures</h1>
+        <p class="tagline">"Not All Who Wander Are Lost"</p>
+    </div>
+    
+    <!-- Photo Gallery Section -->
+    <div class="gallery-grid fade-in">
+        <!-- Placeholder for travel photos - you can add your images here -->
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Travel photo">
+            <div class="gallery-overlay">
+                <h4>Destination Name</h4>
+                <p>Brief description</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Travel photo">
+            <div class="gallery-overlay">
+                <h4>Destination Name</h4>
+                <p>Brief description</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300" alt="Travel photo">
+            <div class="gallery-overlay">
+                <h4>Destination Name</h4>
+                <p>Brief description</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Blog Posts Section -->
+    <div class="blog-section fade-in">
+        <h2>Travel Stories</h2>
+        <p class="coming-soon">Travel blog posts coming soon...</p>
+        
+        <!-- Sample blog post template -->
+        <article class="blog-post card">
+            <h3>Sample Adventure Title</h3>
+            <p class="post-meta">Date • Location</p>
+            <p>Your travel story will go here. Share your experiences, photos, and insights from your journeys around the world.</p>
+            <a href="#" class="read-more">Read More →</a>
+        </article>
+    </div>
+</div>
+
+<style>
+.tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--antique-gold);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: var(--font-body);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(10, 22, 40, 0.9), transparent);
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+    color: var(--old-gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.gallery-overlay p {
+    color: var(--cream);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.blog-section {
+    margin-top: 4rem;
+}
+
+.blog-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.coming-soon {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+    margin: 2rem 0;
+}
+
+.blog-post {
+    margin-bottom: 2rem;
+}
+
+.post-meta {
+    color: var(--bronze);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-modern);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--old-gold);
+    font-family: var(--font-modern);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    transform: translateX(5px);
+}
+
+/* Instructions for adding photos */
+.instructions {
+    background: rgba(207, 181, 59, 0.1);
+    border-left: 4px solid var(--old-gold);
+    padding: 1rem;
+    margin: 2rem 0;
+    font-style: italic;
+}
+</style>
+
+<div class="instructions fade-in">
+    <p><strong>Note:</strong> To add your travel photos, place them in the <code>/assets/images/adventures/</code> folder and update the image sources in this file.</p>
+</div>

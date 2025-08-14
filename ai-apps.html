@@ -1,0 +1,342 @@
+---
+layout: default
+title: AI & Apps
+permalink: /ai-apps/
+---
+
+<div class="container">
+    <div class="fade-in">
+        <h1>AI & Apps</h1>
+        <p class="lead">Exploring the intersection of artificial intelligence, web development, and blockchain</p>
+    </div>
+    
+    <!-- Articles Section -->
+    <section class="articles-section fade-in">
+        <h2>Latest Articles & Insights</h2>
+        <div class="articles-grid">
+            <a href="{{ site.social.medium }}" target="_blank" class="article-card">
+                <i class="fab fa-medium"></i>
+                <h4>Medium Articles</h4>
+                <p>Technical insights and AI explorations</p>
+            </a>
+            
+            <a href="{{ site.social.substack }}" target="_blank" class="article-card">
+                <i class="fas fa-newspaper"></i>
+                <h4>Substack Newsletter</h4>
+                <p>Weekly updates on AI and technology</p>
+            </a>
+            
+            <a href="https://dev.to/jelenastricak" target="_blank" class="article-card">
+                <i class="fab fa-dev"></i>
+                <h4>Dev.to Posts</h4>
+                <p>Developer tutorials and guides</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- GitHub Repositories Section -->
+    <section class="repos-section fade-in">
+        <h2>Open Source Projects</h2>
+        <div id="github-repos" class="repos-grid">
+            <!-- Repos will be loaded here via JavaScript -->
+            <div class="loading">Loading repositories...</div>
+        </div>
+    </section>
+    
+    <!-- AI Creations Section -->
+    <section class="ai-creations fade-in">
+        <h2>AI-Generated Content</h2>
+        <div class="creations-grid">
+            <div class="creation-card">
+                <h4>🎨 AI Art & Images</h4>
+                <p>Generated using DALL-E, Midjourney, and Stable Diffusion</p>
+                <a href="#" class="btn-small">View Gallery</a>
+            </div>
+            
+            <div class="creation-card">
+                <h4>📝 Prompt Engineering</h4>
+                <p>Optimized prompts for various AI models</p>
+                <a href="#" class="btn-small">View Collection</a>
+            </div>
+            
+            <div class="creation-card">
+                <h4>🎬 AI Videos</h4>
+                <p>Content created with AI video generation tools</p>
+                <a href="#" class="btn-small">Watch Videos</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills & Technologies -->
+    <section class="skills-section fade-in">
+        <h2>Technologies & Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Solana</span>
+            <span class="skill-badge">AI/ML</span>
+            <span class="skill-badge">LLMs</span>
+            <span class="skill-badge">Jekyll</span>
+            <span class="skill-badge">Node.js</span>
+            <span class="skill-badge">Web3</span>
+            <span class="skill-badge">ISO 27001</span>
+        </div>
+    </section>
+</div>
+
+<style>
+.lead {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Articles Section */
+.articles-section {
+    margin-bottom: 4rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.article-card {
+    background: rgba(25, 25, 112, 0.3);
+    border: 1px solid rgba(207, 181, 59, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(207, 181, 59, 0.3);
+    background: rgba(25, 25, 112, 0.5);
+}
+
+.article-card i {
+    font-size: 3rem;
+    color: var(--old-gold);
+    margin-bottom: 1rem;
+}
+
+.article-card h4 {
+    color: var(--antique-gold);
+    margin-bottom: 0.5rem;
+}
+
+.article-card p {
+    color: var(--cream);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* GitHub Repos Section */
+.repos-section {
+    margin-bottom: 4rem;
+}
+
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.repo-card {
+    background: rgba(10, 22, 40, 0.7);
+    border: 1px solid rgba(207, 181, 59, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(207, 181, 59, 0.2);
+}
+
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.repo-name {
+    color: var(--old-gold);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.repo-name:hover {
+    color: var(--antique-gold);
+}
+
+.repo-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.repo-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--cream);
+}
+
+.repo-description {
+    color: var(--cream);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.repo-language {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(207, 181, 59, 0.1);
+    border: 1px solid var(--bronze);
+    border-radius: 20px;
+    color: var(--old-gold);
+    font-size: 0.85rem;
+}
+
+.loading {
+    text-align: center;
+    color: var(--cream);
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* AI Creations Section */
+.ai-creations {
+    margin-bottom: 4rem;
+}
+
+.creations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.creation-card {
+    background: rgba(25, 25, 112, 0.2);
+    border: 1px solid rgba(207, 181, 59, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.creation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(207, 181, 59, 0.2);
+}
+
+.creation-card h4 {
+    color: var(--antique-gold);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.creation-card p {
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--bronze);
+    color: var(--old-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: rgba(207, 181, 59, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Skills Section */
+.skills-section {
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.skill-badge {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--bronze);
+    border-radius: 25px;
+    color: var(--old-gold);
+    font-family: var(--font-modern);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    background: rgba(207, 181, 59, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(207, 181, 59, 0.2);
+}
+</style>
+
+<script>
+// Fetch GitHub repositories
+async function loadGitHubRepos() {
+    const username = 'jelenastricak';
+    const reposContainer = document.getElementById('github-repos');
+    
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+        const repos = await response.json();
+        
+        if (repos.length === 0) {
+            reposContainer.innerHTML = '<p class="loading">No public repositories found.</p>';
+            return;
+        }
+        
+        reposContainer.innerHTML = repos.map(repo => `
+            <div class="repo-card">
+                <div class="repo-header">
+                    <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
+                </div>
+                <p class="repo-description">${repo.description || 'No description available'}</p>
+                <div class="repo-stats">
+                    <span class="repo-stat">⭐ ${repo.stargazers_count}</span>
+                    <span class="repo-stat">🔀 ${repo.forks_count}</span>
+                    ${repo.language ? `<span class="repo-language">${repo.language}</span>` : ''}
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        reposContainer.innerHTML = '<p class="loading">Unable to load repositories at this time.</p>';
+        console.error('Error loading repos:', error);
+    }
+}
+
+// Load repos when page loads
+document.addEventListener('DOMContentLoaded', loadGitHubRepos);
+</script>

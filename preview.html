@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelena Stricak - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --midnight-blue: #191970;
+            --royal-blue: #002D62;
+            --dark-navy: #0A1628;
+            --old-gold: #CFB53B;
+            --bronze: #CD7F32;
+            --antique-gold: #D4AF37;
+            --cream: #FFF8DC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--cream);
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--midnight-blue) 50%, var(--royal-blue) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(180deg, rgba(10, 22, 40, 0.95) 0%, rgba(25, 25, 112, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(207, 181, 59, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--cream);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--bronze), var(--old-gold));
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            overflow: hidden;
+            border: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, var(--bronze), var(--old-gold), var(--antique-gold)) border-box;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--old-gold), var(--antique-gold), var(--bronze));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--old-gold);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 2px solid transparent;
+            background: linear-gradient(#0A1628, #0A1628) padding-box,
+                        linear-gradient(135deg, var(--bronze), var(--old-gold)) border-box;
+            color: var(--old-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(207, 181, 59, 0.4);
+            background: linear-gradient(rgba(207, 181, 59, 0.05), rgba(207, 181, 59, 0.05)) padding-box,
+                        linear-gradient(135deg, var(--bronze), var(--old-gold)) border-box;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: rgba(25, 25, 112, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(207, 181, 59, 0.2);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(207, 181, 59, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--antique-gold);
+            margin-bottom: 1rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--cream);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .service-card li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--bronze);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--old-gold);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .nav-menu { 
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/images/ver4.png" alt="Logo" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Herodot</a></li>
+                <li><a href="#adventures" class="nav-link">Adventures</a></li>
+                <li><a href="#ai-apps" class="nav-link">AI & Apps</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="assets/images/me.jpg" alt="Jelena Stricak">
+            </div>
+            
+            <h1>Jelena Stricak</h1>
+            
+            <div class="bio-text">
+                <p>AI consultant and developer who founded Herodot to apply modern AI, data workflows, and secure delivery to research-driven European heritage experiences and education, building on a background as a historian, educator, and licensed tour guide.</p>
+                
+                <p>Designs and deploys AI-assisted content, tutoring, and operational tooling while leading projects and communications for cybersecurity initiatives with ISO/IEC 27001–aligned practices.</p>
+                
+                <p>Certified in project management, AI, and ISO/IEC 27001 auditing, combining structured execution with clear storytelling and bilingual communication in Croatian and English.</p>
+            </div>
+            
+            <h3>Contact Me</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jelenastricak" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/jstricak" target="_blank" class="social-link">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/jelenastricak" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/jelenastricak/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/herodot.tours" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://medium.com/@jstricak" target="_blank" class="social-link">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <a href="https://g.dev/jelenastricak" target="_blank" class="social-link">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://jelenastricak.substack.com" target="_blank" class="social-link">
+                    <i class="fas fa-newspaper"></i>
+                </a>
+                <a href="https://igg.me/at/solmit/x/38652511#/" target="_blank" class="social-link">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </a>
+                <a href="https://jelenastricak.link" target="_blank" class="social-link">
+                    <i class="fas fa-link"></i>
+                </a>
+                <a href="https://solmint.digital" target="_blank" class="social-link">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://www.cyberlinksec.com" target="_blank" class="social-link">
+                    <i class="fas fa-shield-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-title">
+            <h2>Herodot Services</h2>
+            <p style="text-align: center; font-size: 1.2rem; opacity: 0.9;">Comprehensive solutions bridging heritage, education, and modern technology</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>I. Education & Tutoring</h3>
+                <ul>
+                    <li>Tutoring: History/Geography, English & Croatian</li>
+                    <li>Essay Proofreading</li>
+                    <li>Structural/Grammatical Review (EN/HR)</li>
+                    <li>Creative Writing</li>
+                    <li>Curriculum Design</li>
+                    <li>AI-Enhanced Lesson Plans</li>
+                    <li>Digital Literacy Frameworks and AI Tutoring</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>II. Tours</h3>
+                <ul>
+                    <li>Precision Itinerary Planning</li>
+                    <li>Logistics (Bus/Rail Timetables + 30min Stops)</li>
+                    <li>Cultural Storytelling & Interpretation</li>
+                    <li>Operational Management</li>
+                    <li>Client Experience Optimization</li>
+                    <li>Risk-Mitigated Tour Execution</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>III. AI & Tech Consulting</h3>
+                <ul>
+                    <li>AI Consulting & Research</li>
+                    <li>LLM Integration</li>
+                    <li>Solana dApps</li>
+                    <li>ISO/IEC 27001 Implementation</li>
+                    <li>GDPR Compliance Protocols</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>IV. Project Management</h3>
+                <ul>
+                    <li>Micro-Project Management</li>
+                    <li>Resource/Scope Planning</li>
+                    <li>Technical Content Production</li>
+                    <li>Blockchain Whitepapers (Solana Ecosystem)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

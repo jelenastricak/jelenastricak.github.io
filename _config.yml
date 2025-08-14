@@ -1,0 +1,56 @@
+# Jekyll configuration for GitHub Pages
+title: Jelena Stricak
+description: AI consultant and developer who founded Herodot to apply modern AI and secure delivery to research-driven European heritage experiences
+author: Jelena Stricak
+email: contact@jelenastricak.com
+baseurl: "" 
+url: "https://jelenastricak.github.io" # Update with your GitHub Pages URL
+
+# Navigation menu
+navigation:
+  - title: Home
+    url: /
+  - title: Herodot
+    url: /herodot/
+  - title: Adventures
+    url: /adventures/
+  - title: AI & Apps
+    url: /ai-apps/
+
+# Social Media Links
+social:
+  linkedin: https://www.linkedin.com/in/jelenastricak
+  twitter: https://x.com/jstricak
+  github: https://github.com/jelenastricak
+  instagram: https://www.instagram.com/jelenastricak/
+  facebook: https://www.facebook.com/herodot.tours
+  medium: https://medium.com/@jstricak
+  indiegogo: https://igg.me/at/solmit/x/38652511#/
+  personal: https://jelenastricak.link
+  company: https://solmint.digital
+  cyberlinksec: https://www.cyberlinksec.com
+  googledev: https://g.dev/jelenastricak
+  substack: https://jelenastricak.substack.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections for blog/adventures
+collections:
+  adventures:
+    output: true
+    permalink: /adventures/:path/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - server.log
+  - nohup.out
+  - "*.html"
