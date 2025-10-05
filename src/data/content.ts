@@ -41,7 +41,8 @@ export const siteContent = {
   
   contact: {
     title: "Contact",
-    description: "Best way is email. I usually reply within 24–48h."
+    description: "Best way is email. I usually reply within 24–48h.",
+    email: "jstricak@gmail.com"
   },
   
   socialLinks: [

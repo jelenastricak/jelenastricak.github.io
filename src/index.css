@@ -5,8 +5,8 @@
   --color-ink: #F5E6D3;
   --color-paper: #1C1C1C;
   
-  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-family-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans: "Playfair Display", serif;
+  --font-family-serif: "Playfair Display", serif;
 }
 
 @layer base {

@@ -9,6 +9,16 @@ const Contact = () => {
           <p className="text-sm" style={{ color: 'color-mix(in srgb, var(--ink) 80%, transparent)' }}>
             {siteContent.contact.description}
           </p>
+          {siteContent.contact.email && (
+            <p className="text-lg">
+              <a
+                href={`mailto:${siteContent.contact.email}`}
+                className="text-accent hover:underline"
+              >
+                {siteContent.contact.email}
+              </a>
+            </p>
+          )}
         </div>
       </div>
     </section>
