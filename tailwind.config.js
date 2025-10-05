@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Playfair Display"', 'serif'],
-        serif: ['"Playfair Display"', 'serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         accent: '#B8924F',

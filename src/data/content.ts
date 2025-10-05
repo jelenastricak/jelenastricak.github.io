@@ -17,10 +17,25 @@ export const siteContent = {
     updatedDate: "October 2025",
     description: "What I'm focused on this month:",
     items: [
-      "Refreshing student-friendly history handouts with clear typography and better scaffolding.",
-      "Curating travel fact cards for Croatia + nearby day trips (evergreen teacher/tour resources).",
-      "Testing lightweight AI prompts for lesson prep and scheduling support.",
-      "Writing short pieces about humane technology, learning, and everyday history."
+      {
+        text: "Building SolMint (",
+        link: { url: "https://solmint.dev", text: "solmint.dev" },
+        suffix: ")"
+      },
+      {
+        text: "Creating product content for ",
+        links: [
+          { url: "https://pdf-manager.app", text: "pdf-manager.app" },
+          { url: "https://watchguard.dev", text: "watchguard.dev" },
+          { url: "https://solmint.dev", text: "solmint.dev" }
+        ]
+      },
+      {
+        text: "Prototyping lightweight apps"
+      },
+      {
+        text: "Planning history lessons and testing AI workflows for History classes"
+      }
     ]
   },
   
