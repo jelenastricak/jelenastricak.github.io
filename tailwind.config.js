@@ -8,13 +8,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Playfair Display"', 'serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         serif: ['"Playfair Display"', 'serif'],
       },
       colors: {
         accent: '#B8924F',
         ink: '#F5E6D3',
-        paper: '#1C1C1C',
+        paper: '#2f2f2f',
+        charcoal: '#2f2f2f',
+        blackish: '#0a0a0a',
       },
     },
   },

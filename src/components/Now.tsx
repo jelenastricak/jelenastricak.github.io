@@ -49,7 +49,7 @@ const Now = () => {
   return (
     <section id="now" className="py-10 border-t border-white/10">
       <div className="flex items-baseline justify-between gap-4">
-        <h2 className="text-2xl font-semibold text-accent">{siteContent.now.title}</h2>
+        <h2 className="text-2xl font-serif font-semibold text-accent">{siteContent.now.title}</h2>
         <p className="text-sm text-accent">
           Updated <span>{siteContent.now.updatedDate}</span>
         </p>

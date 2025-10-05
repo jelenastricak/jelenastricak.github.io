@@ -19,7 +19,7 @@ const Header = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-3 font-semibold tracking-tight text-accent"
+            className="flex items-center gap-3 font-serif font-semibold tracking-tight text-accent"
           >
             <span>{siteContent.name}</span>
           </a>

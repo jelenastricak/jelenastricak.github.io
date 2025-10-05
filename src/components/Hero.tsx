@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <h1 className="mt-3 text-4xl sm:text-5xl font-extrabold leading-tight text-accent">
+        <h1 className="mt-3 text-4xl sm:text-5xl font-serif font-extrabold leading-tight text-accent">
           {siteContent.title}
         </h1>
         <p className="mt-4 max-w-2xl text-base/7" style={{ color: 'color-mix(in srgb, var(--ink) 75%, transparent)' }}>

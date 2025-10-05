@@ -5,7 +5,7 @@
   --color-ink: #F5E6D3;
   --color-paper: #1C1C1C;
   
-  --font-family-sans: "Playfair Display", serif;
+  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-family-serif: "Playfair Display", serif;
 }
 
@@ -14,7 +14,7 @@
     /* Accent inspired by Herodot's bronze/copper aesthetic */
     --accent: #B8924F; /* bronze */
     --ink: #F5E6D3;    /* near-white */
-    --paper: #1C1C1C;  /* dark background */
+    --paper: #2f2f2f;  /* charcoal background */
   }
   
   html {
