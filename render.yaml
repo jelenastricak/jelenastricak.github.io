@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: jelena-portfolio
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm run server
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #B8924F;
+  --color-ink: #F5E6D3;
+  --color-paper: #1C1C1C;
+  
+  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  :root {
+    /* Accent inspired by Herodot's bronze/copper aesthetic */
+    --accent: #B8924F; /* bronze */
+    --ink: #F5E6D3;    /* near-white */
+    --paper: #2f2f2f;  /* charcoal background */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer utilities {
+  .accent-text {
+    color: var(--accent);
+  }
+  
+  .accent-bg {
+    background-color: var(--accent);
+  }
+  
+  .accent-ring {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+}
